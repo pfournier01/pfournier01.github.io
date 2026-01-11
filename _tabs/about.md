@@ -4,5 +4,4 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+I'm a 25 year old PhD student working with the image analysis of neurobiological data. Here I'll post some various thoughts that need their own full-length articles, from small remarks to full projects with some reviews mixed in.
