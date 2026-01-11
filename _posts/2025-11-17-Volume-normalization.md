@@ -157,6 +157,6 @@ I think the option is there for a reason. I would argue that it's not really wel
 
 ## Source code
 
-All the souce code is available on my GitHub.
+All the souce code is available on my [GitHub](https://github.com/pfournier01/Volume-Normalization).
 
 [^footnote1]: Even in this case, we may see some fluctuations because both recordings are encoded on 16 bit integers. Reducing the amplitude means reducing the precision, so there's some "bit-noise" thrown in there as well.
