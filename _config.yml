@@ -23,7 +23,7 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://pfournier01.github.io"
+url: "https://www.celestialsynapse.xyz"
 
 github:
   username: pfournier01 # change to your GitHub username
@@ -33,11 +33,10 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Paola Fournier
-  email: pfournie@bio.ens.psl.eu # change to your email address
+  email: contact@celestialsynapse.xyz # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/pfournier01 # change to your GitHub homepage
-    - https://bsky.app/profile/celestialsynapse.bsky.social
     - https://tech.lgbt/@celestialsynpase
     # Uncomment below to add more social links
     # - https://www.facebook.com/username

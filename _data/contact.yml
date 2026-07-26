@@ -7,10 +7,6 @@
   icon: 'fab fa-mastodon'
   url:  'https://tech.lgbt/@celestialsynapse'
 
-- type: bluesky
-  icon: 'fa-brands fa-bluesky'
-  url: 'https://bsky.app/profile/celestialsynapse.bsky.social'
-
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
