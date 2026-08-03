@@ -1,0 +1,61 @@
+---
+# This file is processed by Liquid before it is processed by SCSS.
+---
+
+/*
+  By default, Jekyll will look for Sass partials in the _sass directory relative
+  to your site’s source directory.
+*/
+
+{%- if jekyll.environment == 'production' -%}
+@use 'main.bundle';
+{%- else -%}
+@use 'main';
+{% endif %}
+
+/*
+  To revert to the original Chirpy styles other than font-family, comment out
+  all code below this point.
+*/
+
+/*
+  Color edition based on code from
+  https://github.com/conradhalling/jekyll-theme-chirpy/blob/conradhalling
+*/
+
+@use 'light_colors';
+@use 'dark_colors';
+
+:root {
+  /*
+    Set the base hue and saturation for creating style colors. The variables
+    are used in assets/css/light_colors.scss and assets/css/dark_colors.scss.
+  */
+  --base-hue: 300; // 0 to 360
+  --base-saturation: 80; // 0 to 100
+
+  /*
+    Set up support for light mode and dark mode.
+  */
+  @media (prefers-color-scheme: light) {
+    &:not([data-mode]),
+    &[data-mode='light'] {
+      @include light_colors.styles;
+    }
+
+    &[data-mode='dark'] {
+      @include dark_colors.styles;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &:not([data-mode]),
+    &[data-mode='dark'] {
+      @include dark_colors.styles;
+    }
+
+    &[data-mode='light'] {
+      @include light_colors.styles;
+    }
+  }
+}

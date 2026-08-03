@@ -1,0 +1,237 @@
+@mixin styles {
+  color-scheme: light;
+
+  /*
+    Use the base hue and saturation values to define the colors used to style
+    page elements, where the final colors have the same hue and saturation
+    and differ only in their lightness values.
+  */
+  --bg-color-095: hsl(var(--base-hue) var(--base-saturation) 95);
+  --bg-color-090: hsl(var(--base-hue) var(--base-saturation) 90);
+  --bg-color-085: hsl(var(--base-hue) var(--base-saturation) 85);
+  --bg-color-080: hsl(var(--base-hue) var(--base-saturation) 80);
+  --bg-color-075: hsl(var(--base-hue) var(--base-saturation) 75);
+  --bg-color-070: hsl(var(--base-hue) var(--base-saturation) 70);
+  --bg-color-050: hsl(var(--base-hue) var(--base-saturation) 50);
+
+  --text-color-000: hsl(var(--base-hue) var(--base-saturation) 0);
+  --text-color-020: hsl(var(--base-hue) var(--base-saturation) 20);
+  --text-color-025: hsl(var(--base-hue) var(--base-saturation) 25);
+  --text-color-050: hsl(var(--base-hue) var(--base-saturation) 50);
+
+  /*
+    Override Chirpy's default style colors.
+  */
+
+  /*
+    All pages
+  */
+  --heading-color: var(--text-color-000);
+  --text-color: var(--text-color-000);
+  --text-muted-color: var(--text-color-020);
+  --text-muted-highlight-color: var(--text-color-020);
+  --label-color: var(--text-color-000); // For the Recently Updated label
+  --blockquote-border-color: var(--bg-color-070);
+  --blockquote-text-color: var(--text-color-000);
+  --link-color: var(--text-color-025);
+  --link-underline-color: var(--text-color-025);
+  --button-bg: var(--bg-color-085); // back to top button
+  --btn-border-color: var(--bg-color-070); // back to top button; not used?
+
+  /*
+    Home page
+  */
+  --main-bg: var(--bg-color-095);
+  --card-bg: var(--bg-color-090);
+  --main-border-color: var(--bg-color-070);
+  --topbar-bg: var(--bg-color-095);
+
+  /*
+    Top bar search entry field
+  */
+  --search-border-color: var(--bg-color-070);
+  --search-icon-color: var(--text-muted-color);
+  --input-focus-border-color: var(--text-color-100);
+
+  /*
+    Sidebar
+  */
+  --sidebar-bg: var(--bg-color-090);
+  --sidebar-hover-bg: var(--bg-color-085);
+  --sidebar-border-color: var(--bg-color-070); // includes button borders
+  --site-title-color: var(--text-color-000);
+  --site-subtitle-color: var(--text-color-020);
+  --sidebar-active-color: var(--text-color-000); // text color for active tab
+  --sidebar-muted-color: var(--text-color-025);  // text color for inactive tab
+  --avatar-border-color: var(--bg-color-070);
+  --sidebar-btn-bg: var(--bg-color-085);
+  --sidebar-btn-color: var(--text-color-025);
+
+  /*
+    Categories
+  */
+  // --card-header-bg: var(--bg-color-090);
+  .categories .card-header {
+    background-color: var(--bg-color-090);
+    border: 1px solid var(--bg-color-070);
+  }
+
+  /*
+    Prompts
+  */
+  --prompt-text-color: var(--text-color-000);
+  --prompt-tip-bg: var(--bg-color-090);
+  --prompt-info-bg: var(--bg-color-090);
+  --prompt-warning-bg: var(--bg-color-090);
+  --prompt-danger-bg: var(--bg-color-090);
+
+  /*
+    Table of contents of post
+  */
+  --toc-highlight: var(--text-color-050);
+
+  /*
+    Code blocks
+  */
+  --language-border-color: var(--bg-color-070);     // standard border
+  --highlight-bg-color: var(--bg-color-090);        // code block header background
+  .highlight {                                      // code block background
+    background-color: var(--bg-color-095);
+  }
+  --code-header-text-color: var(--text-color-050);  // code block header text
+  --code-header-muted-color: var(--bg-color-070);   // inactive window resize buttons
+  --code-header-icon-color: var(--text-color-050);  // match text
+  --clipboard-checked-color: var(--text-color-050); // match icon
+  --highlight-lineno-color: var(--text-color-050);  // code line number
+  --code-color: var(--text-color-000);              // plain code
+
+  /*
+    Tables
+  */
+  --tb-odd-bg: var(--bg-color-095);                 // odd table rows
+  --tb-even-bg: var(--bg-color-090);                // even table rows
+  --tb-border-color: var(--bg-color-075);           // standard border color
+
+  .table-wrapper > table {
+    border: solid 2px var(--tb-border-color);
+  }
+
+  .table-wrapper > table thead {
+    background-color: var(--bg-color-085);
+    border-bottom: solid 2px var(--tb-border-color);
+  }
+
+  .table-wrapper > table tr th,
+  .table-wrapper > table tr td,
+  {
+    border: solid 1px var(--tb-border-color);
+  }
+
+  /*
+    Hover over links in...
+  */
+  /* post's content */
+  .content a:not(.img-link):hover,
+  /* post's "recently updated" list */
+  #access-lastmod a:hover,
+  /* post's breadcrumb */
+  #topbar #breadcrumb a:hover,
+  /* post's category */
+  .post-meta a:not([class]):hover,
+  /* post's tags */
+  .post-tags .post-tag:hover,
+  /* post's CC license */
+  .post-tail-wrapper .license-wrapper > a:hover,
+  /* post's author, Chirpy, and Jekyll */
+  footer a:hover,
+  #page-category a:hover,
+  div#search-results > article > header > h2 > a:hover,
+  {
+    color: var(--text-color-050) !important;
+    border-bottom: 1px solid var(--text-color-050) !important;
+  }
+
+  /*
+    Change the background of buttons to adjacent posts when hovering.
+  */
+  .btn.btn-outline-primary:not(.disabled):hover {
+    background-color: var(--bg-color-085);
+    border-color: var(--bg-color-070) !important;
+  }
+
+  /*
+    - Set the background color for a post preview card on the Home page.
+    - Override opacity change when hovering over a post preview card.
+    - Hovering over the card changes the card's background instead.
+  */
+  .post-preview {
+    background-color: var(--bg-color-090) !important;
+  }
+
+  .post-preview:hover {
+    &::before {
+      opacity: 0;
+    }
+    background-color: var(--bg-color-085) !important;
+  }
+
+  /*
+    Style the card borders on the Home page.
+  */
+  #post-list .card {
+    border: 1px solid var(--bg-color-070);
+  }
+
+  /*
+    Style search results with a distinct background and border.
+  */
+  #search-results > article > a > section {
+    background-color: var(--bg-color-090);
+    border: 1px solid var(--bg-color-070);
+    &:hover {
+      background-color: var(--bg-color-085);
+    }
+  }
+
+  /*
+    In Archives page, style the year, month, and day the same color.
+  */
+  div#archives .date.day,
+  div#archives .year
+  {
+    color: var(--text-muted-color);
+  }
+
+  /*
+    In the Home page, style the disabled "<" or ">" arrow for pagination.
+  */
+  .pagination .page-item.disabled .page-link {
+    color: var(--bg-color-050);
+  }
+
+  .pagination .page-item.active .page-link {
+    background-color: var(--bg-color-080);
+  }
+
+  /*
+    In the Archives page, style the gradient used as a background for alternate
+    rows.
+  */
+  div#archives li:nth-child(2n+1) {
+    background-image: linear-gradient(
+      to left,
+      var(--bg-color-095),
+      var(--bg-color-090), 
+      var(--bg-color-090), 
+      var(--bg-color-090), 
+      var(--bg-color-095)
+    );
+  }
+
+  /*
+    Image caption.
+  */
+  .content a.popup + em, {
+	  color: var(--text-muted-color) !important;
+	}
+}
