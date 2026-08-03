@@ -1,5 +1,5 @@
 ---
-title: Spirit Swap&#58; Lofi Beats to Match-3 To
+title: "Spirit Swap: Lofi Beats to Match-3 To"
 date: 2025-09-07
 categories: [Game, Video game]
 tags: [itch.io, review]
