@@ -59,3 +59,18 @@
     }
   }
 }
+
+.shimmer::before{
+  background:none;
+}
+
+.preview-img img {
+  object-fit: none;
+  height: 100%;
+  width: 100%;
+  background: none;
+}
+
+.preview-img img, .preview-img, .embed-video{
+  border-radius: 0px !important;
+}

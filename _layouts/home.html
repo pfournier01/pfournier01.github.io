@@ -144,3 +144,7 @@ layout: default
 {% if paginator.total_pages > 1 %}
   {% include post-paginator.html %}
 {% endif %}
+
+{% assign friends = site.tabs | find: 'name', 'friends.md' %}
+<h1> Friends </h1>
+<div> {% include friends.html %} </div>
