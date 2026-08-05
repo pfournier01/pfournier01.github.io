@@ -11,8 +11,7 @@ layout: default
 
 <!-- Get pinned posts on current page -->
 
-{% assign about_tab = site.tabs | where: 'name', 'about.md' %}
-{% assign about_tab = about_tab[0] %}
+{% assign about_tab = site.tabs | find: 'name', 'about.md' %}
 
 <h1> About </h1></br>
 <div>{{ about_tab.content }}</div>
