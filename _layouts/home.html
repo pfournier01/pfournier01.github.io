@@ -13,7 +13,7 @@ layout: default
 
 {% assign about_tab = site.tabs | find: 'name', 'about.md' %}
 
-<h1> About </h1></br>
+<h1> About me</h1></br>
 <div>{{ about_tab.content }}</div>
 
 {% assign visible_start = paginator.page | minus: 1 | times: paginator.per_page %}
@@ -51,6 +51,7 @@ layout: default
   {% endfor %}
 {% endif %}
 
+<h1> Recent articles </h1>
 <div id="post-list" class="flex-grow-1 px-xl-1">
   {% for post in posts %}
     <article class="card-wrapper card">
