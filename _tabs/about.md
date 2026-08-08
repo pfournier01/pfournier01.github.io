@@ -12,4 +12,5 @@ mixed in.
 Some projects I'm currently working on:
 - decompiling O2Mania, an early 2000s PC rhythm game
 - making a homemade Jubeat arcade cabinet
-
+- designing a wood foldable table
+- scrapping bandcamp.com to generate RSS feeds of artists followed by a user
